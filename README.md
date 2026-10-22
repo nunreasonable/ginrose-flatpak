@@ -81,6 +81,6 @@ Its data stays in `~/.var/app/me.daeese.apps.ginrose` until you delete that fold
 Ginrose is proprietary software, free to download, use and redistribute
 unmodified; see [LICENSE](LICENSE). The Flatpak includes Ginrose's build of
 Rosemary, which is GPL-3.0; its source is at
-[microlift/rosemary](https://github.com/microlift/rosemary/tree/486bd8ba).
+[nunreasonable/rosemary](https://github.com/nunreasonable/rosemary/tree/ginrose-0.4).
 
 Ginrose is not affiliated with or endorsed by Roblox Corporation.
