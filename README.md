@@ -19,8 +19,9 @@
 > Rosemary itself is experimental, and so is running Roblox on it.
 > IF YOU USE THIS TO EXPLOIT I AM PERSONALLY GOING TO SEND 10 MISSILES TO YOUR HOME!!! TWAT!
 
-This repository holds Ginrose's installer and its Flatpak releases. Ginrose's
-source code is not public.
+This repository holds Ginrose's installer and its official Flatpak releases.
+Ginrose's source code is at
+[nunreasonable/ginrose](https://github.com/nunreasonable/ginrose).
 
 Ginrose runs the official macOS Roblox client on Linux through Rosemary, a
 macOS compatibility layer. It downloads the client straight from Roblox, keeps
@@ -78,9 +79,16 @@ Its data stays in `~/.var/app/me.daeese.apps.ginrose` until you delete that fold
 
 ## License
 
-Ginrose is proprietary software, free to download, use and redistribute
-unmodified; see [LICENSE](LICENSE). The Flatpak includes Ginrose's build of
-Rosemary, which is GPL-3.0; its source is at
+Ginrose is free software under the GNU General Public License, version 3 or
+later, and so is this installer; see [LICENSE](LICENSE). The source is at
+[nunreasonable/ginrose](https://github.com/nunreasonable/ginrose). The Flatpak
+includes Ginrose's build of Rosemary, also GPL-3.0; its source is at
 [nunreasonable/rosemary](https://github.com/nunreasonable/rosemary/tree/ginrose-0.4.1).
+
+The name "Ginrose", its logo and its application ID are not covered by the
+license: a modified version has to go by its own name. See
+[TRADEMARKS.md](https://github.com/nunreasonable/ginrose/blob/main/TRADEMARKS.md).
+The releases here are the official builds, and they refuse to start a modified
+Roblox client.
 
 Ginrose is not affiliated with or endorsed by Roblox Corporation.
