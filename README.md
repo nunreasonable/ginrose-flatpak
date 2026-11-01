@@ -23,6 +23,9 @@ This repository holds Ginrose's installer and its official Flatpak releases.
 Ginrose's source code is at
 [nunreasonable/ginrose](https://github.com/nunreasonable/ginrose).
 
+For Roblox Studio, see
+[Ginrose Studio](https://github.com/nunreasonable/ginrose-studio).
+
 Ginrose runs the official macOS Roblox client on Linux through Rosemary, a
 macOS compatibility layer. It downloads the client straight from Roblox, keeps
 it up to date, sets it up to run well, and shows what you are playing on
