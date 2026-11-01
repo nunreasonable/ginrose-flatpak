@@ -61,6 +61,26 @@ To have it open the Play buttons on roblox.com when another app already does:
 xdg-mime default me.daeese.apps.ginrose.player.desktop x-scheme-handler/roblox-player x-scheme-handler/roblox
 ```
 
+### Native packages
+
+The release also has the same build as a distribution package, for those who
+would rather not use Flatpak. They need glibc 2.39, GTK 4.14 and libadwaita
+1.6 or newer: Debian 13, Ubuntu 25.04, Fedora 42 or later, openSUSE Tumbleweed
+and Arch have them. From the [latest release](https://github.com/nunreasonable/ginrose-flatpak/releases/latest):
+
+```sh
+sudo pacman -U ginrose-bin-*-x86_64.pkg.tar.zst       # Arch
+sudo apt install ./ginrose_*_amd64.deb                # Debian, Ubuntu
+sudo dnf install ./ginrose-[0-9]*.x86_64.rpm          # Fedora
+sudo zypper install ./ginrose-[0-9]*.x86_64.rpm       # openSUSE
+```
+
+Rosemary is not part of these packages: Ginrose uses a `rosemary` on your
+`PATH` (the AUR's `rosemary`, for example) or downloads one in its setup, which
+then needs SDL 3.4 and OpenAL. NixOS and Gentoo build from source: see
+[packaging](https://github.com/nunreasonable/ginrose/tree/main/packaging) in
+nunreasonable/ginrose.
+
 ### Update and uninstall
 
 Run the install command again to update. To remove Ginrose:
