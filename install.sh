@@ -44,10 +44,15 @@ flatpak install --user -y --noninteractive flathub "$RUNTIME"
 say "Installing Ginrose"
 flatpak install --user -y --noninteractive --reinstall "$tmp/$BUNDLE"
 
-# Play buttons on roblox.com open roblox-player:// and roblox:// links.
+# Play buttons on roblox.com open roblox-player:// and roblox:// links. A
+# handler the user already chose is kept.
 if command -v xdg-mime >/dev/null; then
-    xdg-mime default "$APP.player.desktop" \
-        x-scheme-handler/roblox x-scheme-handler/roblox-player || true
+    for scheme in roblox roblox-player; do
+        handler=$(xdg-mime query default "x-scheme-handler/$scheme" || true)
+        if [ -z "$handler" ]; then
+            xdg-mime default "$APP.player.desktop" "x-scheme-handler/$scheme" || true
+        fi
+    done
 fi
 
 say "Done. Open Ginrose from your app menu, or run: flatpak run $APP"
