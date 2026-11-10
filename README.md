@@ -28,8 +28,9 @@ For Roblox Studio, see
 
 Ginrose runs the official macOS Roblox client on Linux through Rosemary, a
 macOS compatibility layer. It downloads the client straight from Roblox, keeps
-it up to date, sets it up to run well, and shows what you are playing on
-Discord. The client itself is never modified.
+it up to date, sets it up to run well, shows what you are playing on Discord
+and, if you turn it on, where the server you joined is. The client itself is
+never modified.
 
 ## Install
 
@@ -42,6 +43,11 @@ curl -fsSL https://raw.githubusercontent.com/nunreasonable/ginrose-flatpak/main/
 The script downloads the latest release, checks it against `SHA256SUMS`,
 installs the GNOME 51 runtime from Flathub and installs Ginrose for your user.
 Nothing needs root. The setup downloads Roblox on the first run.
+
+The Flatpak comes with Ginrose's build of Rosemary: upstream main plus
+Ginrose's open pull requests, such as keeping the cursor in sync after
+switching windows, drag and drop between an app's own windows, video in
+experiences and the server location notice.
 
 ### By hand
 
@@ -83,7 +89,11 @@ nunreasonable/ginrose.
 
 ### Update and uninstall
 
-Run the install command again to update. To remove Ginrose:
+Run the install command again to update. Since 0.3.6, the first launch moves
+the prefix to MiniDarwin 16, and Ginrose 0.3.5 and older refuse to use it
+afterwards.
+
+To remove Ginrose:
 
 ```sh
 flatpak uninstall --user me.daeese.apps.ginrose
@@ -106,7 +116,7 @@ Ginrose is free software under the GNU General Public License, version 3 or
 later, and so is this installer; see [LICENSE](LICENSE). The source is at
 [nunreasonable/ginrose](https://github.com/nunreasonable/ginrose). The Flatpak
 includes Ginrose's build of Rosemary, also GPL-3.0; its source is at
-[nunreasonable/rosemary](https://github.com/nunreasonable/rosemary/tree/ginrose-0.3.3).
+[nunreasonable/rosemary](https://github.com/nunreasonable/rosemary/tree/ginrose-0.3.6).
 
 The name "Ginrose", its logo and its application ID are not covered by the
 license: a modified version has to go by its own name. See
